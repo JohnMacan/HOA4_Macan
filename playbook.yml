@@ -1,7 +1,7 @@
 ---
 - name: Install monitoring tools
   hosts: all
-  tasks:
-    - name: Install elasticsearch
-      Include_role:
-        name: elk
+  roles:
+    - Logstash
+    - elastic_search
+    - kibana
